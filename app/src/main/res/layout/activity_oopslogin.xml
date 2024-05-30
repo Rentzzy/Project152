@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".oopslogin">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="300dp"
+            android:layout_height="330dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/shoes1" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="-65dp"
+        android:backgroundTint="#1B1A55"
+        app:cardCornerRadius="70dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:cardElevation="1dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="153dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="61dp"
+                android:fontFamily="@font/monsblack"
+                android:text="Welcome to"
+                android:textColor="#2FCEC2"
+                android:textSize="38dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="323dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-22dp"
+                android:fontFamily="@font/monsblack"
+                android:lineSpacingExtra="-22sp"
+                android:text="Tuku sepatu"
+                android:textColor="#FFFFFF"
+                android:textSize="38dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginTop="-22dp"
+                android:fontFamily="@font/monsblack"
+                android:lineSpacingExtra="-22sp"
+                android:text="App"
+                android:textColor="#FFFFFF"
+                android:textSize="38dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_bhaijaan"
+                android:lineSpacingExtra="-22sp"
+                android:text="Find and wear your best shoes here!"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/oopsbutton"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/monsblack"
+                android:letterSpacing="0.02"
+                android:onClick="gaslog"
+                android:text="register"
+                android:textAllCaps="false"
+                android:textColor="#2FCEC2"
+                android:textSize="20dp"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/monsblack"
+                android:letterSpacing="0.02"
+                android:onClick="loginbtn"
+                android:text="login"
+                android:textAllCaps="false"
+                android:textColor="#2FCEC2"
+                android:textSize="20dp"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "614133277095",
+    "firebase_url": "https://project152-caf68-default-rtdb.firebaseio.com",
+    "project_id": "project152-caf68",
+    "storage_bucket": "project152-caf68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614133277095:android:5455f900eca9ce6ce4d682",
+        "android_client_info": {
+          "package_name": "com.example.project152"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfzyrawcBrAII7qaQnqkPYm0QlTQI1AdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
