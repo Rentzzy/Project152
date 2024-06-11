@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, NAMA_DATABASE, null, 1) {
     companion object {
-        private const val NAMA_DATABASE = "localeapp.db"
+        private const val NAMA_DATABASE = "tukusepatu.db"
         private const val NAMA_TABLE = "tborder"
 
         private const val COL_1 = "ID"
@@ -17,16 +17,18 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, NAMA_DATABASE, 
         private const val COL_4 = "SEX"
         private const val COL_5 = "PRICE"
         private const val COL_6 = "SIZE"
+        private const val COL_7 = "LOCATION" // Tambahkan kolom lokasi
     }
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE $NAMA_TABLE (" +
                 "$COL_1 INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "$COL_2 TEXT," +
-                "$COL_3 TEXT," +
-                "$COL_4 TEXT," +
-                "$COL_5 TEXT," +
-                "$COL_6 TEXT" +
+                "$COL_2 TEXT, " +
+                "$COL_3 TEXT, " +
+                "$COL_4 TEXT, " +
+                "$COL_5 TEXT, " +
+                "$COL_6 TEXT, " +
+                "$COL_7 TEXT" + // Tambahkan kolom lokasi
                 ")")
     }
 
@@ -35,7 +37,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, NAMA_DATABASE, 
         onCreate(db)
     }
 
-    fun insertData(brand: String, type: String, sex: String, price: String, size: String): Boolean {
+    fun insertData(brand: String, type: String, sex: String, price: String, size: String, location: String): Boolean {
         val db = this.writableDatabase
         val values = ContentValues()
         values.put(COL_2, brand)
@@ -43,6 +45,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, NAMA_DATABASE, 
         values.put(COL_4, sex)
         values.put(COL_5, price)
         values.put(COL_6, size)
+        values.put(COL_7, location) // Tambahkan lokasi
         val result = db.insert(NAMA_TABLE, null, values)
         return result != -1L
     }
@@ -52,7 +55,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, NAMA_DATABASE, 
         return db.rawQuery("SELECT * FROM $NAMA_TABLE", null)
     }
 
-    fun updateData(id: String, brand: String, type: String, sex: String, price: String, size: String): Boolean {
+    fun updateData(id: String, brand: String, type: String, sex: String, price: String, size: String, location: String): Boolean {
         val db = this.writableDatabase
         val values = ContentValues()
 
@@ -62,6 +65,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, NAMA_DATABASE, 
         values.put(COL_4, sex)
         values.put(COL_5, price)
         values.put(COL_6, size)
+        values.put(COL_7, location) // Tambahkan lokasi
 
         db.update(NAMA_TABLE, values, "$COL_1 = ?", arrayOf(id))
         return true

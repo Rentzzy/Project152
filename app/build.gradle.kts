@@ -46,7 +46,7 @@ dependencies {
 //    implementation(libs.androidx.swiperefreshlayout)
     implementation(libs.android.gif.drawable)
     implementation(libs.firebase.auth)
-//    implementation(libs.google.firebase.database)
+    //implementation(libs.google.firebase.database)
     implementation(libs.firebase.analytics)
     implementation(libs.google.services)
     implementation(libs.play.services.location)

@@ -7,5 +7,5 @@ class dataCart (
     var sex: String,
     var price: String,
     var size: String,
-//    var location: String // New property for location
+    var location: String // New property for location
 )
